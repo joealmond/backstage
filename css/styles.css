@@ -1,0 +1,271 @@
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-border: #ccc;
+  --color-body-darker: #5c5577;
+  --border-radius: 30px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+/* ::selection {
+  background: var(--color-primary);
+  color: white;
+} */
+html {
+  font-size: 62.5%;
+  min-width: 320px;
+}
+
+/* @media screen and (max-width: 425px) {
+  html {
+    font-size: 52.5%;
+  }
+} */
+
+body {
+  font-family: "Inter", Arial, Helvetika, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* @media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+} */
+
+/* Links */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav {
+  position: fixed;
+  background: rgba(102, 51, 153, 0.5);
+  /* height: 66px; */
+  width: 100vw;
+  z-index: 99;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 86px;
+}
+
+.nav-items {
+  padding: 0 20px;
+}
+
+.nav-items a {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.nav-logo {
+  margin-top: -6px;
+  height: 66px;
+}
+
+/* .nav-logo img {
+  background: rgba(73, 70, 70, 0.1);
+  box-shadow: 0px 5px 20px rgba(73, 70, 70, 0.3);
+  margin-top: 4px;
+} */
+
+.nav-button {
+  display: none;
+}
+
+.hero__content .hero--logo {
+  margin-top: 50px;
+}
+
+.hero--background-image {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero--logo {
+  position: absolute;
+  object-fit: contain;
+  height: 20vh;
+  width: 70vw;
+  top: 40vh;
+  left: 15vw;
+}
+
+.spectrum-background {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#660d6f, transparent),
+    linear-gradient(to bottom left, #f390c6, transparent),
+    linear-gradient(to bottom right, #660d6f, transparent);
+  background-blend-mode: screen;
+}
+.nav_toggler {
+  display: none;
+}
+
+.hidebtn {
+  display: none;
+}
+
+.nav-items.nav-logo_mobile {
+  display: none;
+}
+
+@media screen and (min-width: 650px) and (max-width: 980px) {
+  .nav-items.nav-logo {
+    display: none;
+  }
+
+  .nav-items.nav-logo_mobile {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .nav-items.nav-logo_mobile img {
+    height: 66px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav-items.nav-logo {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-items {
+    width: 100vw;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.137);
+  }
+
+  /* .nav-items:first-of-type {
+    border-bottom: none;
+  } */
+  .nav-items:last-of-type {
+    border-bottom: none;
+  }
+
+  .hero__content .hero--logo {
+    margin-top: 140px;
+  }
+
+  .nav-items.nav-logo_mobile {
+    display: block;
+    width: fit-content;
+  }
+
+  .nav-logo_mobile {
+    width: 60vw;
+    object-fit: contain;
+    margin-top: 5px;
+    margin-bottom: 3vw;
+  }
+
+  .nav_toggler {
+    display: block;
+    float: right;
+    width: 60px;
+    margin: 2vw 8px;
+    object-fit: contain;
+  }
+
+  .nav_toggler img {
+    border: 2px solid rgba(255, 255, 255, 0.062);
+    border-radius: 50%;
+  }
+
+  .collapsible {
+    display: none;
+  }
+  /* .collapsible.collapsible--expanded {
+    display: block;
+  } */
+  div.collapsible.\.collapsible--expanded {
+    display: block;
+  }
+
+  .hidebtn {
+    padding: 15px;
+    display: block;
+    position: absolute;
+    margin: 2vw 8px;
+    right: 10px;
+    opacity: 0;
+  }
+}
