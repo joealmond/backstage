@@ -18,58 +18,63 @@
     <title>Backstage Event & Hostess</title>
   </head>
   <body>
-    <nav class="nav">
-      <a class="nav_toggler" href="">
-        <img
-          class="nav_toggler"
-          src="/images/iconmonstr-menu-dot-vertical-thin.svg"
-          alt=""
-        />
-      </a>
-      <input class="hidebtn" type="button" value="btt" onclick="myFunction()" />
-      <ul class="nav-list">
-        <li class="nav-items nav-logo_mobile">
+    <nav>
+      <ul class="nav collapsible" id="navbar">
+        <li class="nav__items nav-btn">
+          <a href="">
+            <img src="/images/iconmonstr-menu-dot-vertical-thin.svg" alt="" />
+          </a>
+          <input
+            class="nav-btn"
+            type="button"
+            value="btt"
+            onclick="myFunction()"
+          />
+        </li>
+        <li class="nav__items nav-logo-mobile">
           <a href=""
             ><img
-              class="nav-logo_mobile"
+              class="nav-logo-mobile"
               src="/images/backstage logo white.png"
               alt=""
           /></a>
         </li>
-        <div class="collapsible nav-list">
-          <li class="nav-items nav-item nav-collapse">
-            <a href="">Rólunk</a>
-          </li>
-          <li class="nav-items nav-item nav-collapse">
-            <a href="">Referenciák</a>
-          </li>
-          <li class="nav-items nav-logo">
-            <a href=""
-              ><img
-                class="nav-logo"
-                src="/images/backstage logo white.png"
-                alt=""
-            /></a>
-          </li>
-          <li class="nav-items nav-item nav-collapse">
-            <a href="">Állás</a>
-          </li>
-          <li class="nav-items nav-item nav-collapse">
-            <a href="">Kapcsolat</a>
-          </li>
-        </div>
+        <li class="nav__items nav-item1">
+          <a href="">Rólunk</a>
+        </li>
+        <li class="nav__items nav-item2">
+          <a href="">Referenciák</a>
+        </li>
+        <li class="nav__items nav-logo">
+          <a href=""
+            ><img
+              class="nav-logo"
+              src="/images/backstage logo white.png"
+              alt=""
+          /></a>
+        </li>
+        <li class="nav__items nav-item3">
+          <a href="">Állás</a>
+        </li>
+        <li class="nav__items nav-item4">
+          <a href="">Kapcsolat</a>
+        </li>
       </ul>
+      <div class="nav-button">
+        <a href="">
+          <img src="/images/iconmonstr-menu-dot-vertical-thin.svg" alt="" />
+        </a>
+      </div>
     </nav>
-
     <section class="hero">
       <div class="hero__content">
         <img
-          class="hero--background-image"
+          class="hero-background-image"
           src="/images/1.kép kezdőkép.JPG"
           alt=""
         />
         <img
-          class="hero--logo hero__content"
+          class="hero-logo hero__content"
           src="/images/backstage logo.png"
           alt=""
         />
